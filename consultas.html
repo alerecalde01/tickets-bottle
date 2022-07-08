@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Consultas</title>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+</style>
+</head>
+<body>
+%if estado == 'pendiente':
+    <h1>Pedidos Pendientes</h1>
+%elif estado =='solucionado':
+   <h1>Pedidos Solucionados</h1>
+%end
+
+<table style="width:100%">
+    <tr>
+        <th>Fecha de carga</th>
+        <th>ID del equipo</th>
+        <th>ID de falla</th>
+        <th>Fecha de Solución</th>
+        <th>Solucionado por</th>
+        <th>Falla</th>
+    </tr>
+    <tbody>
+        % for fila in resultado:
+        <tr>
+            %for c in fila:
+            <td>
+                {{c}}
+            </td>
+            %end
+        </tr>
+        %end
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Siguiente</title>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+</style>
+</head>
+<body>
+<h1>Siguiente Pedido para resolver</h1>
+
+<table>
+    <tr>
+        <th>Fecha de carga</th>
+        <th>ID del equipo</th>
+        <th>ID de falla</th>
+        <th>Fecha de Solución</th>
+        <th>Solucionado por</th>
+        <th>Falla</th>
+    </tr>
+    <tbody>
+        %for c in resultado:
+            <td>
+                {{c}}
+            </td>
+        %end
+    </tbody>
+</table>
+</body>
+</html>
